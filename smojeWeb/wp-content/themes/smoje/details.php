@@ -51,7 +51,7 @@ Template Name: Details
 					<div id="chartcontainer">
 						<div id="chartdiv"></div>
 					</div>							
-					<script src="/ch.bfh.smojeWeb/wp-content/themes/smoje/js/charts.js"></script>
+					<script src="/smojeWeb/wp-content/themes/smoje/js/charts.js"></script>
 				</div>
 			</div>
 		</div>
