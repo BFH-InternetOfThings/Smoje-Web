@@ -28,7 +28,6 @@ $('#formUpdate').validate({
 			url: $(form).attr('action'),
 			data: $(form).find('.tab-pane.active input').serialize(),
 			success: function(result) {
-				alert(result);
 				$('#success').html('<div class="alert alert-success"><strong>Änderungen wurde gespeichert!</strong></div>').delay(3000).fadeOut('fast');
 				$('#formUpdate').fadeOut('fast').delay(3000).fadeIn('fast');
 				$('#formUpdate').find('.has-success').removeClass('has-success');
