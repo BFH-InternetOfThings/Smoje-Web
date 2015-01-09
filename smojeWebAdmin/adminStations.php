@@ -184,9 +184,8 @@ function getGPSData($url) {
 															<td>
 																<?php foreach($sensor->measurements as $idx => $measurement) { ?>
 																	<p>Wert: 
-																	<?php if ($sensor->sensorId == 1) {
-																		$imgPath = str_replace('/var/www', SERVER, $measurement->value); ?>
-																		<a href="<?= $imgPath ?>" class="fancybox" rel="group">[Bild]</a>
+																	<?php if ($sensor->sensorId == 1) { ?>
+																		<a href="<?= SERVER .'/img/'. $measurement->value ?>" class="fancybox" rel="group">[Bild]</a>
 																	<?php } else {
 																		echo "$measurement->value $sensor->unit";
 																	} ?>
