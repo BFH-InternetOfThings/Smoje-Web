@@ -25,7 +25,7 @@ function initialize() {
 	};
 
 	jQuery.getJSON( 
-		"http://178.62.163.199/smoje/index.php/Stations/Sensors/Measurements/", function( data ) {
+		"http://178.62.159.123/smoje/index.php/Stations/Sensors/Measurements/", function( data ) {
 	
 		jsonData = data.station;
 		
@@ -183,7 +183,7 @@ function openDetail(id) {
 	});
 	jQuery.ajax({
 		
-		url: "/ch.bfh.smojeWeb/wp-content/themes/smoje/detail.php",
+		url: "/smojeWeb/wp-content/themes/smoje/detail.php",
 		type: "get",
 		dataType: "html",
 		data: {"id" : id},

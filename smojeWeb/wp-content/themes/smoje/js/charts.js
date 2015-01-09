@@ -111,7 +111,7 @@ function getData(init) {
 	smojes = [];
 	sensorData = {};
 	jQuery.getJSON( 
-		"http://178.62.163.199/smoje/index.php/Stations/Sensors/Measurements/7", function( data ) {
+		"http://178.62.159.123/smoje/index.php/Stations/Sensors/Measurements/7", function( data ) {
 	
 		var sensorSelector = "";
 		var i = 0;
