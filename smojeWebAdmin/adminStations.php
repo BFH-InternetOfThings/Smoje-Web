@@ -203,7 +203,7 @@ function getGPSData($url) {
 								</div>
 							</div>
 							<?php } ?>
-							<button type="submit" class="btn btn-default" id="btnSave" name="btnSave">Speichern</button>
+							<button type="submit" class="btn btn-success" id="btnSave" name="btnSave">Speichern</button>
 						</div>
 					</form>
 				</div>
@@ -222,8 +222,8 @@ function getGPSData($url) {
 						<p>Station restarten?</p>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
-						<button type="button" class="btn btn-primary" id="btnRestartConf" name="btnRestartConf">Restart NetModule</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Abbrechen</button>
+						<button type="button" class="btn btn-success" id="btnRestartConf" name="btnRestartConf">Restart NetModule</button>
 					</div>
 				</div>
 			</div>
