@@ -126,7 +126,7 @@ function getData(init) {
 		
 				if (sensor.name.indexOf("camera") == -1 &&
 					!sensorData[sensor.name] &&
-					sensor.displayTypeId) {
+					sensor.displayTypeId < 3) {
 			
 					var innerClassName = "";
 					if (j == 0) {
@@ -135,7 +135,7 @@ function getData(init) {
 						j++;
 					}
 					
-					if (init && sensor.displayTypeId < 3) {
+					if (init) {
 						
 						sensorSelector += '<li role="presentation" class="' + innerClassName + '"><a href="#' + sensor.title + '" data-toggle="tab" onclick="setSensor(\'' + sensor.name + '\');">' + sensor.title + '</a></li>';
 					}
