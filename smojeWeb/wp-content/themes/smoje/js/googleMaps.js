@@ -82,7 +82,8 @@ function addSmoje(smoje) {
 		for (var i = 0; i < smoje.sensors.length; i++) {
 	
 			var sensor = smoje.sensors[i];
-			if (sensor.displayTypeId == 1) {
+			if (sensor.displayTypeId == 1 &&
+				sensor.measurements[0].value != "failed") {
 				
 				var measurement = sensor.measurements[0];
 				// var arr = measurement.timestamp.date.split(/[- :]/);

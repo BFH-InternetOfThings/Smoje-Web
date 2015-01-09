@@ -135,7 +135,7 @@ function getData(init) {
 						j++;
 					}
 					
-					if (init) {
+					if (init && sensor.displayTypeId < 3) {
 						
 						sensorSelector += '<li role="presentation" class="' + innerClassName + '"><a href="#' + sensor.title + '" data-toggle="tab" onclick="setSensor(\'' + sensor.name + '\');">' + sensor.title + '</a></li>';
 					}

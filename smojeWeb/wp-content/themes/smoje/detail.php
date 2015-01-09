@@ -62,7 +62,9 @@ $smoje = new Smoje($_GET["id"]);
 			if (
 				($sensor["measurements"] && $sensor["name"] != "gps") &&
 				(!stristr($sensor["name"], "camera")) &&
-				array_key_exists("displayTypeId", $sensor)) {
+				array_key_exists("displayTypeId", $sensor) &&
+				$sensor["displayTypeId"] < 3 &&
+				$sensor["measurements"][0]["value"] != "failed") {
 					
 					$measurement = $sensor["measurements"][0];
 					$date = new DateTime();
