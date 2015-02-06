@@ -90,7 +90,7 @@ function setSensor (sensorKey) {
 			"title": smojes[i].title,
 			"valueField": sensor.name + "Value_" + smojes[i].smojeId,
 			"fillAlphas": 0,
-			"type": "smoothedLine",
+			"type": "line",
 		};
 		graph.valueText = "[[value]] " + sensor.unit;
 		graph.balloonText = "[[title]]:<b>[[value]] " + sensor.unit + "</b>";
