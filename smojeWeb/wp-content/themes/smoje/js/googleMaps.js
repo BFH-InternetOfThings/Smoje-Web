@@ -15,7 +15,7 @@ function initialize() {
 	headerContainer = jQuery("header");
 	detailContainer = jQuery("#detail-container");
 	image = {
-		url: 'http://www.smoje.ch/theme/default/images/map-marker.png',
+		url: 'http://178.62.159.123/smojeWeb/wp-content/themes/smoje/img/map-marker.png',
 		// This marker is 20 pixels wide by 32 pixels tall.
 		size: new google.maps.Size(45, 44),
 		// The origin for this image is 0,0.
