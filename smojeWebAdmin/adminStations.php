@@ -87,10 +87,10 @@ function getGPSData($url) {
 											</div>
 											<div class="row">
 												<div class="col-sm-8">
-													<div class="form-group">
+													<!--<div class="form-group">
 														<label class="control-label">Externe Spannung</label>
-														<p class="form-control-static"><?= $gpsData->lastExternVoltage; ?> V</p>
-													</div>
+														<p class="form-control-static"><?//= $gpsData->lastExternVoltage; ?> V</p>
+													</div>-->
 												</div>
 												<div class="col-sm-4">
 													<div class="form-group">
@@ -104,7 +104,7 @@ function getGPSData($url) {
 								</div>
 								<div class="panel panel-primary">
 									<div class="panel-heading">
-										<a href="#position<?= $idx; ?>" data-toggle="collapse" data-target="#position<?= $idx; ?>">Position (via Tissan-Tracker)</a>
+										<a href="#position<?= $idx; ?>" data-toggle="collapse" data-target="#position<?= $idx; ?>">Position (via NetModule)</a>
 									</div>
 									<div id="position<?= $idx; ?>" class="panel-collapse collapse in">
 										<div class="panel-body">
@@ -136,13 +136,13 @@ function getGPSData($url) {
 												<div class="col-xs-6 col-sm-4">
 													<div class="form-group">
 														<label class="control-label">Letztes Update</label>
-														<p class="form-control-static"><?= $gpsData->lastPosition->gpstime; ?></p>
+														<p class="form-control-static"><?= $gpsData->lastPosition->deviceTime; ?></p>
 													</div>
 												</div>
 												<div class="col-xs-6 col-sm-2">
 													<div class="form-group">
 														<label class="control-label">Karte</label>
-														<p class="form-control-static"><a href="http://tracker.xrj.ch/smoje-api/v1/1001">Google Maps</a></p>
+														<p class="form-control-static"><a href="<?= $station->urlNetmodule; ?>">Google Maps</a></p>
 													</div>
 												</div>
 											</div>
