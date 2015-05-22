@@ -1,0 +1,527 @@
+[
+	{
+		"id" : "1",
+		"name" : "Ἄρτεμις",
+		"description" : "",
+		"sensors" : [
+			{
+				"id" : "1",
+				"name" : "gps",
+				"description" : "",
+				"delay" : 60,
+				"status" : "ok",
+				"type" : {
+					"id" : "1",
+					"name" : "location",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "1",
+						"name" : "Latitude",
+						"value" : 47.066614,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.007"
+					},
+					{
+						"id" : "1",
+						"name" : "Longitude",
+						"value" : 7.116051,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.007"
+					}
+				]
+			},
+			{
+				"id" : "3",
+				"name" : "Air",
+				"description" : "",
+				"delay" : 90,
+				"status" : "ok",
+				"type" : {
+					"id" : "3",
+					"name" : "temperature",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "3",
+						"name" : "Temperature",
+						"value" : 10.6128641024,
+						"unit" : "°C",
+						"timestamp" : "2014-11-07T14:15:12.64"
+					}
+				]
+			},
+			{
+				"id" : "3",
+				"name" : "Water",
+				"description" : "",
+				"delay" : 90,
+				"status" : "ok",
+				"type" : {
+					"id" : "3",
+					"name" : "temperature",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "3",
+						"name" : "Temperature",
+						"value" : 8.2345246356356,
+						"unit" : "°C",
+						"timestamp" : "2014-11-07T14:15:12.64"
+					}
+				]
+			},
+			{
+				"id" : "2",
+				"name" : "Wind",
+				"description" : "",
+				"delay" : 120,
+				"status" : "ok",
+				"type" : {
+					"id" : "2",
+					"name" : "wind",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "4",
+						"name" : "Direction",
+						"value" : 273.5998234528798,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.128"
+					},
+					{
+						"id" : "4",
+						"name" : "Speed",
+						"value" : 3,
+						"unit" : "km/h",
+						"timestamp" : "2014-11-07T14:16:42.128"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id" : "2",
+		"name" : "Süderi",
+		"description" : "",
+		"sensors" : [
+			{
+				"id" : "1",
+				"name" : "gps",
+				"description" : "",
+				"delay" : 60,
+				"status" : "ok",
+				"type" : {
+					"id" : "1",
+					"name" : "location",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "1",
+						"name" : "Latitude",
+						"value" : 47.082981,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.007"
+					},
+					{
+						"id" : "1",
+						"name" : "Longitude",
+						"value" : 7.158966,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.007"
+					}
+				]
+			},
+			{
+				"id" : "3",
+				"name" : "Air",
+				"description" : "",
+				"delay" : 90,
+				"status" : "ok",
+				"type" : {
+					"id" : "3",
+					"name" : "temperature",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "3",
+						"name" : "Temperature",
+						"value" : 10.6128641024,
+						"unit" : "°C",
+						"timestamp" : "2014-11-07T14:15:12.64"
+					}
+				]
+			},
+			{
+				"id" : "3",
+				"name" : "Water",
+				"description" : "",
+				"delay" : 90,
+				"status" : "ok",
+				"type" : {
+					"id" : "3",
+					"name" : "temperature",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "3",
+						"name" : "Temperature",
+						"value" : 8.2345246356356,
+						"unit" : "°C",
+						"timestamp" : "2014-11-07T14:15:12.64"
+					}
+				]
+			},
+			{
+				"id" : "2",
+				"name" : "Wind",
+				"description" : "",
+				"delay" : 120,
+				"status" : "ok",
+				"type" : {
+					"id" : "2",
+					"name" : "wind",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "4",
+						"name" : "Direction",
+						"value" : 320.5998234528798,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.128"
+					},
+					{
+						"id" : "4",
+						"name" : "Speed",
+						"value" : 5.34564564646,
+						"unit" : "km/h",
+						"timestamp" : "2014-11-07T14:16:42.128"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id" : "3",
+		"name" : "判誉",
+		"description" : "",
+		"sensors" : [
+			{
+				"id" : "1",
+				"name" : "gps",
+				"description" : "",
+				"delay" : 60,
+				"status" : "ok",
+				"type" : {
+					"id" : "1",
+					"name" : "location",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "1",
+						"name" : "Latitude",
+						"value" : 47.056324,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.007"
+					},
+					{
+						"id" : "1",
+						"name" : "Longitude",
+						"value" : 7.144203,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.007"
+					}
+				]
+			},
+			{
+				"id" : "3",
+				"name" : "Air",
+				"description" : "",
+				"delay" : 90,
+				"status" : "ok",
+				"type" : {
+					"id" : "3",
+					"name" : "temperature",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "3",
+						"name" : "Temperature",
+						"value" : 10.6128641024,
+						"unit" : "°C",
+						"timestamp" : "2014-11-07T14:15:12.64"
+					}
+				]
+			},
+			{
+				"id" : "3",
+				"name" : "Water",
+				"description" : "",
+				"delay" : 90,
+				"status" : "ok",
+				"type" : {
+					"id" : "3",
+					"name" : "temperature",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "3",
+						"name" : "Temperature",
+						"value" : 7.2345246356356,
+						"unit" : "°C",
+						"timestamp" : "2014-11-07T14:15:12.64"
+					}
+				]
+			},
+			{
+				"id" : "2",
+				"name" : "Wind",
+				"description" : "",
+				"delay" : 120,
+				"status" : "ok",
+				"type" : {
+					"id" : "2",
+					"name" : "wind",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "4",
+						"name" : "Direction",
+						"value" : 5.5998234528798,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.128"
+					},
+					{
+						"id" : "4",
+						"name" : "Speed",
+						"value" : 4.34564563346,
+						"unit" : "km/h",
+						"timestamp" : "2014-11-07T14:16:42.128"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id" : "4",
+		"name" : "Те́трис",
+		"description" : "",
+		"sensors" : [
+			{
+				"id" : "1",
+				"name" : "gps",
+				"description" : "",
+				"delay" : 60,
+				"status" : "ok",
+				"type" : {
+					"id" : "1",
+					"name" : "location",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "1",
+						"name" : "Latitude",
+						"value" : 47.102382,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.007"
+					},
+					{
+						"id" : "1",
+						"name" : "Longitude",
+						"value" : 7.196388,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.007"
+					}
+				]
+			},
+			{
+				"id" : "3",
+				"name" : "Air",
+				"description" : "",
+				"delay" : 90,
+				"status" : "ok",
+				"type" : {
+					"id" : "3",
+					"name" : "temperature",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "3",
+						"name" : "Temperature",
+						"value" : 12.6128641024,
+						"unit" : "°C",
+						"timestamp" : "2014-11-07T14:15:12.64"
+					}
+				]
+			},
+			{
+				"id" : "3",
+				"name" : "Water",
+				"description" : "",
+				"delay" : 90,
+				"status" : "ok",
+				"type" : {
+					"id" : "3",
+					"name" : "temperature",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "3",
+						"name" : "Temperature",
+						"value" : 6.2345246356356,
+						"unit" : "°C",
+						"timestamp" : "2014-11-07T14:15:12.64"
+					}
+				]
+			},
+			{
+				"id" : "2",
+				"name" : "Wind",
+				"description" : "",
+				"delay" : 120,
+				"status" : "ok",
+				"type" : {
+					"id" : "2",
+					"name" : "wind",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "4",
+						"name" : "Direction",
+						"value" : 80.5998234528798,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.128"
+					},
+					{
+						"id" : "4",
+						"name" : "Speed",
+						"value" : 5,
+						"unit" : "km/h",
+						"timestamp" : "2014-11-07T14:16:42.128"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id" : "5",
+		"name" : "جسم شناور",
+		"description" : "",
+		"sensors" : [
+			{
+				"id" : "1",
+				"name" : "gps",
+				"description" : "",
+				"delay" : 60,
+				"status" : "ok",
+				"type" : {
+					"id" : "1",
+					"name" : "location",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "1",
+						"name" : "Latitude",
+						"value" : 47.083215,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.007"
+					},
+					{
+						"id" : "1",
+						"name" : "Longitude",
+						"value" : 7.192955,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.007"
+					}
+				]
+			},
+			{
+				"id" : "3",
+				"name" : "Air",
+				"description" : "",
+				"delay" : 90,
+				"status" : "ok",
+				"type" : {
+					"id" : "3",
+					"name" : "temperature",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "3",
+						"name" : "Temperature",
+						"value" : 13.6128641024,
+						"unit" : "°C",
+						"timestamp" : "2014-11-07T14:15:12.64"
+					}
+				]
+			},
+			{
+				"id" : "3",
+				"name" : "Water",
+				"description" : "",
+				"delay" : 90,
+				"status" : "ok",
+				"type" : {
+					"id" : "3",
+					"name" : "temperature",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "3",
+						"name" : "Temperature",
+						"value" : 9.2345246356356,
+						"unit" : "°C",
+						"timestamp" : "2014-11-07T14:15:12.64"
+					}
+				]
+			},
+			{
+				"id" : "2",
+				"name" : "Wind",
+				"description" : "",
+				"delay" : 120,
+				"status" : "ok",
+				"type" : {
+					"id" : "2",
+					"name" : "wind",
+					"description" : ""
+				},
+				"measurements" : [
+					{
+						"id" : "4",
+						"name" : "Direction",
+						"value" : 175.5998234528798,
+						"unit" : "°",
+						"timestamp" : "2014-11-07T14:16:42.128"
+					},
+					{
+						"id" : "4",
+						"name" : "Speed",
+						"value" : 6.54534345345,
+						"unit" : "km/h",
+						"timestamp" : "2014-11-07T14:16:42.128"
+					}
+				]
+			}
+		]
+	}
+]
