@@ -24,6 +24,12 @@ function initialize() {
 		anchor: new google.maps.Point(16, 44)
 	};
 
+	mapOptions = {
+		center: { lat: 47.142334 ,lng: 7.243298 },
+		zoom: 12
+	};
+	map = new google.maps.Map(mapHolder.get(0), mapOptions);
+
 	jQuery.getJSON( 
 		"http://178.62.159.123/smoje/index.php/Stations/Sensors/Measurements/", function( data ) {
 	
