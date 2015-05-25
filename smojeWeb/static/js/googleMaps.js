@@ -1,9 +1,12 @@
 var contentStrings = {};
 var holderType = "large";
-var markers = {};
+var markers = [];
 var smojes = [];
 var image, map, infoWindow, mapOptions, isDetailOpen, detailContainer, mapHolder, headerContainer, detailMap, detailMapOptions;
 var smojeCount = 0;
+var zoomToMarkers = true;
+var maxZoom = 18;
+var detailZoomLevel = 14;
 
 function initialize() {
 	
@@ -52,7 +55,8 @@ function addSmoje(smoje) {
 	
 	jQuery.getJSON(smoje.urlNetmodule + "status", function( data ) {
 	
-		var gps = data.lastPosition;
+		smoje.index = smojeCount
+		smoje.gps = data.lastPosition;
 		var arr = data.timeUpdated.split(/[- :T.]/);
 		var date = arr[2] + "." + arr[1] + "." + arr[0] + " " + arr[3] + ":" + arr[4] + ":" + arr[5];
 		contentStrings[smoje.stationId] = 
@@ -71,7 +75,7 @@ function addSmoje(smoje) {
 											'Breitengrad:' +
 										'</th>' +
 										'<td>' +
-											gps.latitude + '°' +
+											smoje.gps.latitude + '°' +
 										'</td>' +
 									'<tr>' +
 									'<tr>' +
@@ -79,7 +83,7 @@ function addSmoje(smoje) {
 											'Längengrad:' +
 										'</th>' +
 										'<td>' +
-											gps.longitude + '°' +
+											smoje.gps.longitude + '°' +
 										'</td>' +
 									'<tr>' +
 								'</table>' +
@@ -112,20 +116,12 @@ function addSmoje(smoje) {
 					'<a class="btn btn-default measurementDetailLink" href="#" onclick="openDetail(' + smoje.stationId + ')">Details</a>' +
 				'</div>';
 
-		mapOptions = {
-			center: { lat: parseFloat(gps.latitude) ,lng: parseFloat(gps.longitude)},
-			zoom: 12
-		};
-		if (smojeCount == 0) {
-	
-			map = new google.maps.Map(mapHolder.get(0), mapOptions);
-		}
-		markers[smoje.stationId] = new google.maps.Marker({
-			position: new google.maps.LatLng(gps.latitude , gps.longitude),
+		markers.push(new google.maps.Marker({
+			position: new google.maps.LatLng(smoje.gps.latitude , smoje.gps.longitude),
 			icon: image,
 			map: map,
 			title: smoje.name
-		});
+		}));
 		if (smojeCount == 0) {
 	
 			infoWindow = new google.maps.InfoWindow();
@@ -135,15 +131,15 @@ function addSmoje(smoje) {
 		}
 		if (holderType == "large") {
 			
-			google.maps.event.addListener(markers[smoje.stationId], 'click', function() {
+			google.maps.event.addListener(markers[smoje.index], 'click', function() {
 				infoWindow.setContent(contentStrings[smoje.stationId]);
 				infoWindow.close();
-				infoWindow.open(map,markers[smoje.stationId]);
+				infoWindow.open(map,markers[smoje.index]);
 			});
 		}
 		else {
 			
-			google.maps.event.addListener(markers[smoje.stationId], 'click', function() {
+			google.maps.event.addListener(markers[smoje.index], 'click', function() {
 				openDetail(smoje.stationId);
 			});
 		}
@@ -180,7 +176,19 @@ function resize() {
 		
 		height: (jQuery(window).height()+20-mapHolder.offset().top)+"px",
 		marginTop: "0"
-	})
+	});
+
+	if (zoomToMarkers && maxZoom) {
+
+		var bounds = new google.maps.LatLngBounds();
+		for(i=0;i<markers.length;i++) {
+
+			bounds.extend(markers[i].getPosition());
+		}
+
+		map.fitBounds(bounds);
+		if (map.zoom > maxZoom) map.setZoom(maxZoom);
+	}
 }
 
 function openDetail(id) {
@@ -208,7 +216,7 @@ function openDetail(id) {
 			var params = detailMapContainer.attr("data-param").split("|");
 			detailMapOptions = {
 				center: { lat: parseFloat(params[0]) ,lng: parseFloat(params[1])},
-				zoom: 12
+				zoom: detailZoomLevel
 			};
 			detailMap = new google.maps.Map(detailMapContainer.get(0), detailMapOptions);
 			var marker = new google.maps.Marker({

@@ -1,6 +1,6 @@
 <?php include("inc/header.php") ?>
 
-		<div id="headline" class="banner">
+		<div id="headline" class="banner intro-banner">
 			<div class="wrapper">
 				<h1>Smoje - die smarteste Boje der Welt!</h1>
 			</div>

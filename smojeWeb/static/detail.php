@@ -97,20 +97,18 @@ $smoje = new Smoje($_GET["id"]);
 			
 			if (array_key_exists("displayTypeId", $sensor)) {
 				
-				if (stristr($sensor["name"], "camera")) {
+				if (stristr($sensor["name"], "camera") && array_key_exists("measurements", $sensor)) {
 				
 					$value = "";
-					if (array_key_exists("measurements", $sensor)) {
-						
-						foreach($sensor["measurements"] as $measurement) {
 					
-							$value = $measurement["value"];
-							$measurement = $sensor["measurements"][0];
-							echo ($measurement["timestamp"]["date"]);
-							$date = new DateTime();
-							$date->setTimestamp($measurement["timestamp"]);
-							$date = $date->format('d.m.Y H:i:s');
-						}
+					foreach($sensor["measurements"] as $measurement) {
+				
+						$value = $measurement["value"];
+						$measurement = $sensor["measurements"][0];
+						echo ($measurement["timestamp"]["date"]);
+						$date = new DateTime();
+						$date->setTimestamp($measurement["timestamp"]);
+						$date = $date->format('d.m.Y H:i:s');
 					}
 				?>
 				<div class="col-md-12">

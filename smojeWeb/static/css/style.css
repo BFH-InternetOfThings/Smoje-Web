@@ -99,6 +99,9 @@ header {
 	text-align: center;
 }
 
+.intro-banner {
+	height: auto;
+}
 
 /* === NAVIGATION BAR === */
 nav {
@@ -386,8 +389,6 @@ th .measurementDate {
 	.navbar-default .navbar-nav {
 		width: 100%;
 	}
-<<<<<<< HEAD
-=======
 
 	.social {
 		margin-top: 17px;
@@ -411,5 +412,4 @@ th .measurementDate {
 	.container #map-holder {
 		height: 100px;
 	}
->>>>>>> 3f135eac762e500874676f8b469807503ee4af46
 }
