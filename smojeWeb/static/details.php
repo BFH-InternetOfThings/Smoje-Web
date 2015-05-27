@@ -28,11 +28,11 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<script type="text/javascript" src="js/amcharts/amcharts.js"></script>
-					<script type="text/javascript" src="js/amcharts/serial.js"></script>
-					<script type="text/javascript" src="js/amcharts/none.js"></script>
-					<script type="text/javascript" src="js/amcharts/amstock.js"></script>
-					<script type="text/javascript" src="js/amcharts/de.js"></script>
+					<script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+					<script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
+					<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/none.js"></script>
+					<script type="text/javascript" src="http://www.amcharts.com/lib/3/amstock.js"></script>
+					<script type="text/javascript" src="http://cdn.amcharts.com/lib/3/lang/de.js"></script>
 					<div id="chartcontainer">
 						<div id="chartdiv"></div>
 					</div>							
