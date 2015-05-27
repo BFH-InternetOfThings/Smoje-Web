@@ -103,6 +103,26 @@ header {
 	height: auto;
 }
 
+#app-panel {
+	background-color: #fff;
+	border: 5px solid #00bff3;
+	border-radius: 15px 0 0 15px;
+	color: #000;
+	right: -145px;
+	padding: 15px 10px 15px 20px;
+	position: fixed;
+	text-align: center;
+	top: calc(50% - 37px);
+	/*width: 150px;*/
+	z-index: 20;
+}
+
+#app-panel i {
+	left: 5px;
+	position: absolute;
+	top: calc(50% - 14px);
+}
+
 /* === NAVIGATION BAR === */
 nav {
 	background-color: none;

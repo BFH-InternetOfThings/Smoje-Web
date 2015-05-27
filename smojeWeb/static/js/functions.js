@@ -1,14 +1,26 @@
 jQuery(document).ready(function() {
 	fadeContainer();
+	sideSlidePanel();
 });
 
 /* ****************************************
 	Fade Toggle container when opening menu
 **************************************** */
-function fadeContainer($) {
+function fadeContainer() {
 	jQuery('.navbar-toggle').click(function() {
 		jQuery('.container').toggleClass('faded');
 		jQuery('.map-holder-big, .map-holder-small').toggleClass('faded');
+	});
+}
+
+/* ****************************************
+	Side slide panel for android app
+**************************************** */
+function sideSlidePanel() {
+	jQuery('#app-panel').hover(function() {
+		jQuery('#app-panel').animate({'right': '-5px'}, 'fast');
+	}, function() {
+		jQuery('#app-panel').animate({'right': '-145px'}, 'fast');
 	});
 }
 
