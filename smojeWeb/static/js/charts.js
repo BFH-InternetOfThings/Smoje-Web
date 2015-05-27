@@ -1,4 +1,5 @@
 var chart;
+var showInitialMeasurements = 50;
 var jsonData, tmpSensor, tmpMeasurement, mSensorKey;
 var smojes, sensorData;
 var sensorData = {};
@@ -47,7 +48,7 @@ var dataObj = {
     },
     "categoryField": "date",
     "categoryAxis": {
-        "parseDates": true,
+    	"parseDates": true,
 		"minPeriod": "mm",
         "axisColor": "#DADADA",
         "minorGridEnabled": true,
@@ -86,7 +87,7 @@ function setSensor (sensorKey) {
 			"bullet": styles[i].bullet,
 			"valueAxis": "v",
 			"bulletBorderThickness": 1,
-			"hideBulletsCount": 30,
+			"hideBulletsCount": 150,
 			"title": smojes[i].title,
 			"valueField": sensor.name + "Value_" + smojes[i].smojeId,
 			"fillAlphas": 0,
@@ -102,8 +103,8 @@ function setSensor (sensorKey) {
 	chart.valueAxes[0].unit = " " + sensor.unit;
 	chart.dataProvider = sensorData[sensorKey].measurements;
 	chart.validateData();
-	zoomChart();
 	chart.validateNow();
+	zoomChart();
 }
 
 function getData(init) {
@@ -155,14 +156,33 @@ function getData(init) {
 				
 					jQuery.each( sensor.measurements, function( measurementKey, measurement ) {
 		
-						var obj = {};
-						// var arr = measurement.timestamp.date.split(/[- :]/);
-						obj["date"] = new Date(measurement.timestamp*1000);
-						obj[sensor.name + "Value_" + station.stationId] = parseFloat(measurement.value);
-						sensorData[sensor.name].measurements.unshift(obj);
-						if (!sensorData[sensor.name].minValue || (parseFloat(measurement.value) < sensorData[sensor.name].minValue)) {
-				
-							sensorData[sensor.name].minValue = parseFloat(measurement.value);
+						// We have to make sure to have a chromologically well sorted array of objects with unique date fields
+						// so let's do some sorting...
+						var index = 0;
+						var tmpTimestamp = 0;
+						var timestamp = (measurement.timestamp*1000);
+						if (sensorData[sensor.name].measurements[index] && sensorData[sensor.name].measurements[index]["date"]) {
+
+							tmpTimestamp = sensorData[sensor.name].measurements[index]["date"].getTime();
+							while(sensorData[sensor.name].measurements[index] && (tmpTimestamp < timestamp)) {
+
+								index++;
+								if (sensorData[sensor.name].measurements[index]) {
+									
+									tmpTimestamp = sensorData[sensor.name].measurements[index]["date"].getTime();
+								}
+							}
+						}
+						if (tmpTimestamp == timestamp) {
+
+							sensorData[sensor.name].measurements[index][sensor.name + "Value_" + station.stationId] = parseFloat(measurement.value);
+						}
+						else {
+
+							var obj = {};
+							obj["date"] = new Date(measurement.timestamp*1000);
+							obj[sensor.name + "Value_" + station.stationId] = parseFloat(measurement.value);
+							sensorData[sensor.name].measurements.splice(index, 0, obj);
 						}
 					});
 				}
@@ -189,8 +209,8 @@ function getData(init) {
 
 function zoomChart(){
 	
-	if (chart.dataProvider && chart.dataProvider.length >= 50) {
-	
-	    chart.zoomToIndexes(chart.dataProvider.length - 50, chart.dataProvider.length - 1);
+	if (chart.dataProvider.length > showInitialMeasurements) {
+
+		chart.zoomToIndexes(chart.dataProvider.length-showInitialMeasurements, chart.dataProvider.length-1);
 	}
 }
