@@ -203,6 +203,8 @@ function getData(init) {
 			
 			chart.dataProvider = sensorData[mSensorKey].measurements;
 			chart.validateData();
+			chart.validateNow();
+			zoomChart();
 		}
 	});
 }
