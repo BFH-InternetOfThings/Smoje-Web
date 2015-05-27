@@ -10,7 +10,7 @@
 			<div class="row">
 				<div class="col-md-8">
 										<p><p><div style="width: 854px; height: 380px; " class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-<video class="wp-video-shortcode" id="video-8-1" width="854" height="380" preload="metadata" controls="controls"><source type="video/mp4" src="http://localhost/ch.bfh.smojeWeb/wp-content/uploads/2014/11/smoje.mp4?_=1" /><a href="http://localhost/ch.bfh.smojeWeb/wp-content/uploads/2014/11/smoje.mp4">http://localhost/ch.bfh.smojeWeb/wp-content/uploads/2014/11/smoje.mp4</a></video></div><br />
+<video class="wp-video-shortcode" id="video-8-1" width="854" height="380" preload="metadata" controls="controls"><source type="video/mp4" src="smoje.mp4" /><a href="smoje.mp4">smoje.mp4</a></video></div><br />
 Das Wort &#8220;Smoje&#8221; ist eine Kombination der Worte &#8220;smart&#8221; und &#8220;Boje&#8221; &#8211; das Wort &#8220;Smoje&#8221; soll also der Begriff für eine intelligente / smarte Boje sein.</p>
 <p>Doch was steht wirklich hinter diesem Begriff beziehungsweise hinter der URL www.smoje.ch?</p>
 <p><strong>Smoje</strong> ist ein <strong>Studentenprojekt</strong> der Berner Fachhochschule (BFH), Departement Technik und Informatik. Im 3. Studienjahr wird das Fach &#8220;Mobile Computing&#8221; angeboten, welches sich diesmal mit der Thematik des sog. Internet of Things (IoT) beschäftigt.</p>
@@ -31,9 +31,10 @@ Das Wort &#8220;Smoje&#8221; ist eine Kombination der Worte &#8220;smart&#8221; 
 		<div id="detail-container"></div>
 		<link rel='stylesheet' id='mediaelement-css'  href='js/mediaelement/mediaelementplayer.min.css?ver=2.15.0' type='text/css' media='all' />
 <link rel='stylesheet' id='wp-mediaelement-css'  href='js/mediaelement/wp-mediaelement.css?ver=4.0' type='text/css' media='all' />
+<script>
 /* <![CDATA[ */
 var mejsL10n = {"language":"de","strings":{"Close":"Schlie\u00dfen","Fullscreen":"Vollbild","Download File":"Datei herunterladen","Download Video":"Video herunterladen","Play\/Pause":"Abspielen \/ Pause","Mute Toggle":"Stumm schalten","None":"Keine","Turn off Fullscreen":"Vollbild ausschalten","Go Fullscreen":"Vollbild einschalten","Unmute":"Laut schalten","Mute":"Stumm","Captions\/Subtitles":"Bildunterschriften \/ Untertitel"}};
-var _wpmejsSettings = {"pluginPath":"\/smoje-web\/smojeWeb\/wp-includes\/js\/mediaelement\/"};
+var _wpmejsSettings = {"pluginPath":"js\/mediaelement\/"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='js/mediaelement/mediaelement-and-player.min.js?ver=2.15.0'></script>
