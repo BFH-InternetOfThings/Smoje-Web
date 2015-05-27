@@ -32,7 +32,7 @@
 					</div>
 					<div id="navbar" class="navbar-collapse collapse">
 						<?php wp_nav_menu(array(
-							'menu'			=> 'primary',
+							'theme_location'			=> 'primary',
 							'container'		=> '',
 							'menu_id'		=> 'navbar',
 							'menu_class'	=> 'nav navbar-nav',
